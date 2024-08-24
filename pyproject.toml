@@ -8,6 +8,11 @@ packages = [{include = "disease_prediction"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+matplotlib = "^3.9.2"
+seaborn = "^0.13.2"
+scikit-learn = "^1.5.1"
+imblearn = "^0.0"
+xgboost = "^2.1.1"
 
 
 [tool.poetry.group.dev.dependencies]
