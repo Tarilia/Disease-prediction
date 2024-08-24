@@ -5,7 +5,8 @@ from sklearn.metrics import confusion_matrix
 
 def visualize_ratio(df):
     plt.figure(figsize=(8, 6))
-    plt.pie(df['status'].value_counts(), labels=df['status'].value_counts().index,
+    plt.pie(df['status'].value_counts(),
+            labels=df['status'].value_counts().index,
             autopct='%1.1f%%', startangle=140)
     plt.axis('equal')
     plt.title('The ratio of health status')
@@ -21,7 +22,8 @@ def visualize_balanced_ratio(y_resampled):
 
 
 def building_pair(df):
-    sns.pairplot(df, vars=['MDVP:Fo(Hz)', 'MDVP:Jitter(%)', 'MDVP:Shimmer', 'NHR'],
+    sns.pairplot(df, vars=['MDVP:Fo(Hz)', 'MDVP:Jitter(%)',
+                           'MDVP:Shimmer', 'NHR'],
                  hue='status')
     plt.suptitle('Pairplot of Selected Features', size=12)
     plt.show()
